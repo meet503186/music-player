@@ -26,7 +26,7 @@ const songs = [{
 ];
 
 let isPlaying = false;
-let updateTimer;
+
 // PLAY FUNCTIONALITY
 const playMusic = () =>{
     isPlaying = true;
@@ -34,7 +34,7 @@ const playMusic = () =>{
     play.classList.replace("fa-play", "fa-pause");
     play.title = 'Pause';
     img.classList.add('anime');
-    updateTimer = setInterval(range_slider, 1000);
+    setInterval(range_slider, 1000);
 };
 
 // PAUSE FUNCTIONALITY
@@ -57,10 +57,8 @@ play.addEventListener('click', () => {
 //  CHANGING THE MUSIC
 
 const loadSong = (songs) => {
-    clearInterval(updateTimer);
     title.textContent = songs.title;
     music.src = "music/" + songs.name + ".mp3";
-    range_slider;
 };
 
 let songIndex = 0;
@@ -118,8 +116,7 @@ music.addEventListener('timeupdate', (event) => {
 // });
 
 progress.addEventListener('change', (event) => {
-    // let slider_position = music.duration * (progress.value / 100);
-    let slider_position = (currentTime / duration)*100;
+    let slider_position = music.duration * (progress.value / 100);
     music.currentTime = slider_position;
 });
 

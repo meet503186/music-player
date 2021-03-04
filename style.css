@@ -62,7 +62,8 @@ img{
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    object-fit: cover;
+    background-color: orange;
+    object-fit: scale-down;
     box-shadow: 0 1.2rem 3rem 0.5rem rgba(0, 0, 0, 0.4);
 }
 
@@ -97,7 +98,8 @@ img{
 }
 
 .music_controls .fas:hover{
-    color:#ff8a65;
+    /* color:#ff8a65; */
+    color: orange;
 }
 
 .music_controls .fa-play:hover{
@@ -170,7 +172,8 @@ input[type="range"]::-webkit-slider-thumb{
     appearance: none;
     height: 1.5rem;
     width: 1.5rem;
-    background: #ff8a65;
+    /* background: #ff8a65; */
+    background: orange;
     border-radius: 50%;
 }
 .progress_duration_meter{
